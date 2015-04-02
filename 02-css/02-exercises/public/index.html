@@ -16,6 +16,7 @@
       min-width: 800px;
     }
 
+    
     #content {
       border-left: 1px dotted #aaa;
       border-right: 1px dotted #aaa;
@@ -42,66 +43,74 @@
 
     .red {
       /* use a hex value */
-
+      color:#FF0000;
     }
 
     .green {
       /* use a hex value */
+      color:#00FF00;
     }
 
     .mostly-black {
       /* use an rgb value */
+      color:rgb(10, 41, 10);
     }
 
     .transparent-black {
       /* add an alpha component to your color to make the text half transparent */
+      opacity: 0.5;
+      filter: alpha(opacity=50);
     }
 
     .serif {
       /* set the font family to some serif font (look it up if you have to), and
       include a fallback in case the font is unavailable */
+      font-family:serif,times;
     }
 
     .bold {
-
+      font-weight: bold;
     }
 
     .small-text {
       /* use a pixel font size */
+      font-size: 10px;
     }
 
     .relatively-small-text {
       /* use a relative value (em) to make the text half as large */
+      font-size: .5em;
     }
 
     .relatively-big-text {
       /* use a relative value (em) to make the text twice as large */
+      font-size: 2em;
     }
 
     /* what is the difference between a relative value and a pixel value? */
 
     .double-line-height {
-
+      line-height: 2em;
     }
 
     .align-right {
-
+      text-align: right;
     }
 
     .underline {
-    
+      text-decoration: underline;
     }
 
     .strikethrough {
-      
+      text-decoration: line-through;
     }
 
     .capitalize {
-
+      text-transform: capitalize;
     }
 
     .uppercase {
-
+      text-transform: uppercase;
     }
 
   </style>
