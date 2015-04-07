@@ -11,30 +11,39 @@
 
 		var validChoice = true;
 
-		console.log(player1, player2);
+		console.log("Player 1 chose " + player1);
+		console.log("Plyer 2 chose " + player2);
 
-		if ( !( player1 == "rock" || player1 == "scissors" || player1 == "paper" ) ) {
-			alert("Invalid choice for player 1");
-			validChoice = false;
-		}
-		if ( !( player2 == "rock" || player2 == "scissors" || player2 == "paper" ) ) {
-			alert("Invalid choice for player 2");
-			validChoice = false;
-		}
+		player1Check();
+		player2Check();
+		game();
 
-
-		if ( validChoice ) {
-
-			if ( player1 == player2 ) {
-				alert("tied");
-			} else if ( ( player1 == "rock" && player2 == "scissors" )
-					 || ( player1 == "paper" && player2 == "rock" )
-					 || ( player1 == "scissors" && player2 == "paper" ) ) {
-				alert("player 1 wins");
-			} else {
-				alert("player 2 wins");
+		function player1Check(){
+			if ( !( player1 == "rock" || player1 == "scissors" || player1 == "paper" ) ) {
+				alert("Invalid choice for player 1");
+				validChoice = false;
 			}
-			
+		}
+
+		function player2Check() {
+			if ( !( player2 == "rock" || player2 == "scissors" || player2 == "paper" ) ) {
+				alert("Invalid choice for player 2");
+				validChoice = false;
+			}
+		}	
+
+		function game() {
+			if ( validChoice ) {
+				if ( player1 == player2 ) {
+					alert("tied");
+				} else if ( ( player1 == "rock" && player2 == "scissors" )
+						 || ( player1 == "paper" && player2 == "rock" )
+						 || ( player1 == "scissors" && player2 == "paper" ) ) {
+					alert("player 1 wins");
+				} else {
+					alert("player 2 wins");
+				}	
+			}
 		}
 
 	</script>
